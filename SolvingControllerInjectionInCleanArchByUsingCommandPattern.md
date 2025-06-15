@@ -1,5 +1,16 @@
 # Clean Architecture: Giải quyết Controller Injection dùng Command Pattern
 
+> Khi áp dụng Clean Architecture, một trong những thách thức lớn nhất là làm sao để giảm sự phụ thuộc (dependency) giữa các tầng.
+> Thông thường, chúng ta inject các interface Use Case vào Controller --> số lượng dependency injection trong Controller tăng khi 1 controller phải inject nhiều quá Use Case
+>
+
+###🧠 Luồng Xử Lý với Command Bus
+- Controller chỉ cần gửi Command (đóng gói yêu cầu) vào CommandBus.
+
+- CommandBus tự động tìm CommandHandler tương ứng và thực thi.
+
+- CommandHandler chứa business logic, gọi tới Use Case hoặc Domain Service.
+
 ## 🧱 1. **Command Pattern là gì?**
 
 ### Định nghĩa:
