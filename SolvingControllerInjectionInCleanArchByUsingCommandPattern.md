@@ -4,7 +4,7 @@
 > Thông thường, chúng ta inject các interface Use Case vào Controller --> số lượng dependency injection trong Controller tăng khi 1 controller phải inject nhiều quá Use Case
 >
 
-###🧠 Luồng Xử Lý với Command Bus
+###🧠 Giải Pháp: Luồng Xử Lý với Command Pattern + Command Bus
 - Controller chỉ cần gửi Command (đóng gói yêu cầu) vào CommandBus.
 
 - CommandBus tự động tìm CommandHandler tương ứng và thực thi.
